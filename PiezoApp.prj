@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3553101926" file="U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur\PiezoApp.prj" location="U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur" name="PiezoApp" preferred-package-location="U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur\PiezoApp\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="3553101926" file="U:\Projekte\Christian\Misc\PiezoAkteur\Code\PiezoApp.prj" location="U:\Projekte\Christian\Misc\PiezoAkteur\Code" name="PiezoApp" preferred-package-location="U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur\PiezoApp\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>PiezoApp</param.appname>
     <param.icon />
     <param.icons />
@@ -91,20 +91,26 @@
       <file>${PROJECT_ROOT}\FittedModelInverted.mat</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\PiezoApp\for_testing" name="splash.png" optional="false">U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur\PiezoApp\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\PiezoApp\for_testing" name="readme.txt" optional="true">U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur\PiezoApp\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\PiezoApp\for_testing" name="PiezoApp.exe" optional="false">U:\Projekte an Analysis1\Christian\Misc\PiezoAkteur\PiezoApp\for_testing\PiezoApp.exe</file>
+      <file location="${PROJECT_ROOT}\PiezoApp\for_testing" name="readme.txt" optional="true">U:\Projekte\Christian\Misc\PiezoAkteur\Code\PiezoApp\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\PiezoApp\for_testing" name="PiezoApp.exe" optional="false">U:\Projekte\Christian\Misc\PiezoAkteur\Code\PiezoApp\for_testing\PiezoApp.exe</file>
+      <file location="${PROJECT_ROOT}\PiezoApp\for_testing" name="splash.png" optional="false">U:\Projekte\Christian\Misc\PiezoAkteur\Code\PiezoApp\for_testing\splash.png</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2020b</root>
+      <root>C:\Program Files\MATLAB\R2024a</root>
       <toolboxes>
-        <toolbox name="embeddedcoder" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="fixedpoint" />
       </toolboxes>
       <toolbox>
-        <embeddedcoder>
+        <matlabcoder>
           <enabled>true</enabled>
-        </embeddedcoder>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
       </toolbox>
     </matlab>
     <platform>
